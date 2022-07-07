@@ -6,6 +6,7 @@ public class Motion : MonoBehaviour
 {
     public static float lookSpeed = 3;
     public float MoveSpeed = 3;
+    public float SprintSpeed = 5.25f;
     private Vector2 rotation = Vector2.zero;
     CharacterController cc;
 
@@ -47,12 +48,19 @@ public class Motion : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * x + transform.forward * z;
-        cc.Move(move * MoveSpeed * Time.deltaTime);
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) // sprinting checker
+        {
+            Vector3 move = transform.right * x + transform.forward * z;
+            cc.Move(move * SprintSpeed * Time.deltaTime);
+        }
+        else
+        {
+            Vector3 move = transform.right * x + transform.forward * z;
+            cc.Move(move * MoveSpeed * Time.deltaTime);
+        }
 
         //jumping
         if (isGrounded && Input.GetButton("Jump") && canJump) {
-            print("sup");
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
     }
