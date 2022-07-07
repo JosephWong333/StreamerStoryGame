@@ -34,7 +34,6 @@ public class TextureSwitch : MonoBehaviour
             rend.sharedMaterial = og_mat;
             yield return new WaitForSeconds(change_speed);
             i += rate * Time.deltaTime;
-            Debug.Log("iter");
         }
         StartCoroutine(timer(10f));
 
