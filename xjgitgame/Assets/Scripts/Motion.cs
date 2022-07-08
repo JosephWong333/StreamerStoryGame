@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Motion : MonoBehaviour
 {
@@ -29,10 +30,13 @@ public class Motion : MonoBehaviour
     float defaultYPos = 0;
     float timer;
 
+    //audio
+    public AudioSource walkSound;
+
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         cc = transform.GetComponent<CharacterController>();
 
         defaultYPos = Camera.main.transform.localPosition.y;
@@ -61,20 +65,38 @@ public class Motion : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
+        Vector3 move = transform.right * x + transform.forward * z;
+
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) // sprinting checker
         {
-            Vector3 move = transform.right * x + transform.forward * z;
             cc.Move(move * SprintSpeed * Time.deltaTime);
         }
         else
         {
-            Vector3 move = transform.right * x + transform.forward * z;
             cc.Move(move * MoveSpeed * Time.deltaTime);
         }
 
         //jumping
         if (isGrounded && Input.GetButton("Jump") && canJump) {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+
+        //Footstep Sounds
+        if (move != Vector3.zero && isGrounded)
+        {
+            if (walkSound.isPlaying)
+            {
+
+            }
+            else
+            {
+                walkSound.Play();
+            }
+            
+        }
+        else
+        {
+                walkSound.Stop();
         }
 
     }
