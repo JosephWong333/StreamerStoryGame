@@ -242,6 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 2010065139}
   isActive: 1
+  useEsc: 1
 --- !u!1 &61144797
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,7 +671,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.4469447, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -792,7 +793,7 @@ GameObject:
   - component: {fileID: 269725252}
   - component: {fileID: 269725251}
   m_Layer: 5
-  m_Name: SettingsBtn
+  m_Name: ExitBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -865,7 +866,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2010065144}
         m_TargetAssemblyTypeName: DevActive, Assembly-CSharp
-        m_MethodName: actor
+        m_MethodName: actorLock
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2317,8 +2318,8 @@ RectTransform:
   m_Father: {fileID: 653327906}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.4469447, y: 0}
+  m_AnchorMax: {x: 0.4469447, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2577,8 +2578,8 @@ RectTransform:
   m_Father: {fileID: 178169208}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.4469447, y: 0}
+  m_AnchorMax: {x: 0.4469447, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4069,7 +4070,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.4469447, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6102,7 +6103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2010065140
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6193,6 +6194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 2010065139}
   isActive: 0
+  useEsc: 0
 --- !u!1 &2017137274
 GameObject:
   m_ObjectHideFlags: 0

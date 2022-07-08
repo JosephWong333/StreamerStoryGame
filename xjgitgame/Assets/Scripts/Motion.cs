@@ -36,7 +36,7 @@ public class Motion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
         cc = transform.GetComponent<CharacterController>();
 
         defaultYPos = Camera.main.transform.localPosition.y;
