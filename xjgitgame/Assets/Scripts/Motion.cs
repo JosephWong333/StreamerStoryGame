@@ -34,6 +34,8 @@ public class Motion : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         cc = transform.GetComponent<CharacterController>();
+
+        defaultYPos = Camera.main.transform.localPosition.y;
     }
 
     // Update is called once per frame
