@@ -21,6 +21,7 @@ public class npcanims : MonoBehaviour
 
     [SerializeField]
     float closeamount = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,11 +33,9 @@ public class npcanims : MonoBehaviour
     {
         if (canMove)
         {
-            print("moving");
             nma.SetDestination(target.position);
             if (Vector3.Distance(transform.position, target.position) < closeamount)
             {
-                print("touched player");
                 canMove = false;
                 anim.SetTrigger(trigger2);
             }

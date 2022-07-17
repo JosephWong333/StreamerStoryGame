@@ -111,15 +111,30 @@ public class MotionCar : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
-        //Footstep Sounds
-        if (move != Vector3.zero && isGrounded)
+        //CAR Sounds
+        if (move != Vector3.zero && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
         {
+            print("sus");
             if (walkSound.isPlaying)
             {
-
+                walkSound.pitch = 2;
             }
             else
             {
+                walkSound.pitch = 2;
+                walkSound.Play();
+            }
+
+        }
+        else if (move != Vector3.zero)
+        {
+            if (walkSound.isPlaying)
+            {
+                walkSound.pitch = 1;
+            }
+            else
+            {
+                walkSound.pitch = 1;
                 walkSound.Play();
             }
 
