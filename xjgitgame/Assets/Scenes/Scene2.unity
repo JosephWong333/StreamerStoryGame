@@ -2192,6 +2192,7 @@ MonoBehaviour:
   target: {fileID: 902246598}
   anim: {fileID: 83542089}
   trigger2: fall
+  canMove: 0
   closeamount: 10
 --- !u!95 &83542089
 Animator:
@@ -2508,6 +2509,7 @@ MonoBehaviour:
   target: {fileID: 902246598}
   anim: {fileID: 87608761}
   trigger2: fall
+  canMove: 0
   closeamount: 10
 --- !u!95 &87608761
 Animator:
@@ -2603,6 +2605,7 @@ MonoBehaviour:
   target: {fileID: 902246598}
   anim: {fileID: 88638558}
   trigger2: fall
+  canMove: 0
   closeamount: 10
 --- !u!95 &88638558
 Animator:
@@ -5518,6 +5521,7 @@ MonoBehaviour:
   target: {fileID: 902246598}
   anim: {fileID: 217331885}
   trigger2: fall
+  canMove: 0
   closeamount: 10
 --- !u!95 &217331885
 Animator:
@@ -13175,6 +13179,7 @@ MonoBehaviour:
   target: {fileID: 902246598}
   anim: {fileID: 537664191}
   trigger2: fall
+  canMove: 0
   closeamount: 10
 --- !u!95 &537664191
 Animator:
@@ -19058,6 +19063,7 @@ MonoBehaviour:
   target: {fileID: 902246598}
   anim: {fileID: 748588313}
   trigger2: fall
+  canMove: 0
   closeamount: 10
 --- !u!95 &748588313
 Animator:
@@ -20596,6 +20602,7 @@ MonoBehaviour:
   target: {fileID: 902246598}
   anim: {fileID: 811858417}
   trigger2: fall
+  canMove: 0
   closeamount: 10
 --- !u!95 &811858417
 Animator:
@@ -23401,6 +23408,7 @@ MonoBehaviour:
   target: {fileID: 902246598}
   anim: {fileID: 937796137}
   trigger2: fall
+  canMove: 0
   closeamount: 10
 --- !u!95 &937796137
 Animator:
@@ -29051,6 +29059,7 @@ MonoBehaviour:
   target: {fileID: 902246598}
   anim: {fileID: 1183609676}
   trigger2: fall
+  canMove: 0
   closeamount: 10
 --- !u!95 &1183609676
 Animator:
@@ -29525,6 +29534,7 @@ MonoBehaviour:
   target: {fileID: 902246598}
   anim: {fileID: 1203874053}
   trigger2: fall
+  canMove: 0
   closeamount: 10
 --- !u!95 &1203874053
 Animator:
@@ -30602,6 +30612,7 @@ MonoBehaviour:
   target: {fileID: 902246598}
   anim: {fileID: 1238318649}
   trigger2: fall
+  canMove: 0
   closeamount: 10
 --- !u!95 &1238318649
 Animator:
@@ -36490,8 +36501,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.031761628, y: 0.026162142, z: 0.021376591}
-  m_Center: {x: -0.000000015260303, y: -0.00041306086, z: 0.008072934}
+  m_Size: {x: 0.031761628, y: 0.026162142, z: 0.0783672}
+  m_Center: {x: 0.00000020116715, y: -0.00046928859, z: 0.036571324}
 --- !u!1 &1476721042
 GameObject:
   m_ObjectHideFlags: 0
@@ -39363,7 +39374,7 @@ Transform:
   - {fileID: 2146673888}
   - {fileID: 1242009065}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1571948574
 GameObject:
@@ -52596,6 +52607,7 @@ MonoBehaviour:
   target: {fileID: 902246598}
   anim: {fileID: 2124951672}
   trigger2: fall
+  canMove: 0
   closeamount: 10
 --- !u!95 &2124951672
 Animator:
@@ -55251,7 +55263,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009632370617292375}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.51, y: 4.796131, z: 16.111193}
+  m_LocalPosition: {x: 22.51, y: 4.796131, z: 14.94}
   m_LocalScale: {x: 105.58057, y: 336.71558, z: 110.87182}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -55264,7 +55276,7 @@ Transform:
   - {fileID: 5398777986017100480}
   - {fileID: 1476199194}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &392257721897436591
 GameObject:
@@ -58029,6 +58041,7 @@ MonoBehaviour:
   target: {fileID: 902246598}
   anim: {fileID: 955813717}
   trigger2: fall
+  canMove: 0
   closeamount: 10
 --- !u!1 &919132149171470658
 GameObject:
@@ -58087,6 +58100,7 @@ MonoBehaviour:
   target: {fileID: 902246598}
   anim: {fileID: 17628181}
   trigger2: fall
+  canMove: 0
   closeamount: 10
 --- !u!23 &923405438716223202
 MeshRenderer:

@@ -17,7 +17,7 @@ public class npcanims : MonoBehaviour
     [SerializeField]
     string trigger2;
 
-    bool canMove = true;
+    public bool canMove = false;
 
     [SerializeField]
     float closeamount = 1f;
@@ -36,12 +36,12 @@ public class npcanims : MonoBehaviour
             nma.SetDestination(target.position);
             if (Vector3.Distance(transform.position, target.position) < closeamount)
             {
-                canMove = false;
+                //canMove = false;
                 anim.SetTrigger(trigger2);
             }
 
-        }
-           
     }
+
+}
 
 }
