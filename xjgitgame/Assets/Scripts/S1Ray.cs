@@ -15,16 +15,27 @@ public class S1Ray : MonoBehaviour
     [SerializeField] private Image PickUpimage;
     //[SerializeField] private Image Holdimage;
     //[SerializeField] private GameObject NewMusic;
-    //[SerializeField] private GameObject Music1;
+    [SerializeField] private GameObject Music1;
     //[SerializeField] private GameObject Music2;
-    [SerializeField] private VideoSystem EndVideo;  // will need to do a next scene button
+    [SerializeField] private VideoSystem StartVideo;
+    //[SerializeField] private VideoSystem EndVideo1;  // LOSE 
+    //[SerializeField] private VideoSystem EndVideo2;  // WIN will need to do a next scene button
 
 
     private void Start()
     {
         // by default music 1 and 2 are both disabled
+        // wait a second for level loader fade transition
         // video
-        // enable music 1 when vid is done
+        StartCoroutine(timer1(1));
+    }
+
+    IEnumerator timer1(float time)
+    {
+        yield return new WaitForSeconds(time);
+        StartVideo.Shoot();
+        Cursor.lockState = CursorLockMode.None;
+        //Music1.SetActive(true); //dothis in possible close button
     }
 
     // Update is called once per frame
