@@ -12,7 +12,7 @@ public class VideoSystem : MonoBehaviour
     bool Prep_WhenDone_Shoot = false;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         GetComponent<VideoPlayer>().Prepare();
 

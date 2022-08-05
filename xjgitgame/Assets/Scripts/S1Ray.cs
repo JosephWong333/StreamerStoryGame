@@ -16,10 +16,11 @@ public class S1Ray : MonoBehaviour
     //[SerializeField] private Image Holdimage;
     //[SerializeField] private GameObject NewMusic;
     [SerializeField] private GameObject Music1;
-    //[SerializeField] private GameObject Music2;
+    [SerializeField] private GameObject Music2;
     [SerializeField] private VideoSystem StartVideo;
-    //[SerializeField] private VideoSystem EndVideo1;  // LOSE 
-    //[SerializeField] private VideoSystem EndVideo2;  // WIN will need to do a next scene button
+    [SerializeField] private GameObject MamoVideo1;
+    //[SerializeField] private VideoSystem MamoEndVideoLose;  // LOSE 
+    //[SerializeField] private VideoSystem MamoEndVideoWin;  // WIN will need to do a next scene button
 
 
     private void Start()
@@ -47,10 +48,15 @@ public class S1Ray : MonoBehaviour
         {
             PickUpimage.gameObject.SetActive(true);
 
-            if (Input.GetMouseButtonDown(0) && (targetLayerMask == target1))
+            if (Input.GetMouseButtonDown(0) && (targetLayerMask == target1)) //key
             {
+                Music1.SetActive(false);
+                Music2.SetActive(false);
+                MamoVideo1.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
                 HitInfo.transform.gameObject.SetActive(false);
                 print("DONE");
+                // In button script custom method: do under
                 // set off video
                 // then Hold Image shows
                 // chromattic abberation
@@ -58,7 +64,7 @@ public class S1Ray : MonoBehaviour
                 // mamo runs at you (has screaming audiosource)
             }
 
-            if (Input.GetMouseButtonDown(0) && (targetLayerMask == target2))
+            if (Input.GetMouseButtonDown(0) && (targetLayerMask == target2)) //car
             {
                 print("DONE");
                 // disable mamo
