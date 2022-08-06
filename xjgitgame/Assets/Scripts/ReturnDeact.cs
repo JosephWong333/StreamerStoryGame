@@ -58,7 +58,7 @@ public class ReturnDeact : MonoBehaviour
         obj2.SetActive(true); // enabling new music
         Cursor.lockState = CursorLockMode.Locked;
         // enable mamo stuff N
-        SleepingMamo.SetActive(true);
+        SleepingMamo.SetActive(false);
         RunningMamo.SetActive(true);
         chromaticAbberation.intensity.value = 1;
 
