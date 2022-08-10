@@ -34,6 +34,14 @@ public class ReturnDeact : MonoBehaviour
     //[SerializeField]
     private ChromaticAberration chromaticAbberation;
 
+    [Header("DeActS2")]
+    [SerializeField]
+    private S2TIME s2time;
+    [SerializeField]
+    private npcanims[] NPCs;
+    [SerializeField]
+    private AiFollow copCar;
+
     public void Awake()
     {
         if (isDeAct3)
@@ -67,6 +75,21 @@ public class ReturnDeact : MonoBehaviour
     public void NewScene(int index) //Restart
     {
         SceneManager.LoadScene(index);
+    }
+
+    public void DeActS2()
+    {
+        obj.SetActive(false);
+        obj2.SetActive(true);
+        s2time.StartTimerBack();
+
+        Cursor.lockState = CursorLockMode.Locked;
+
+        foreach (npcanims npc in NPCs) {
+            npc.canMove = true;
+        }
+
+        copCar.canGo = true;
     }
 
 }

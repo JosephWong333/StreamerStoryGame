@@ -11,6 +11,26 @@ public class S2TIME : MonoBehaviour
     public int timeLeft = 100;
     public bool working = true;
 
+    [Header("objects")]
+
+    [SerializeField]
+    private GameObject player;
+
+    [SerializeField]
+    private GameObject[] LoseObjects;
+
+    [SerializeField]
+    private GameObject vidLOSE;
+
+    [SerializeField]
+    private GameObject vidWIN;
+
+
+    public void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     // Start is called before the first frame update
     IEnumerator Timing()
     {
@@ -41,8 +61,38 @@ public class S2TIME : MonoBehaviour
         //safeguard
         if (working == false) { return; }
 
+        //lose?
+        if (timeLeft == 0 && working == true) {
+
+            player.GetComponent<MotionCar>().enabled = false;
+            // wowzers
+            foreach (GameObject x in LoseObjects)
+            {
+                x.SetActive(false);
+            }
+            vidLOSE.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            return;
+        }
+
         working = false;
         Debug.Log("DONENENEN111");
+    }
+
+    public void ForceEnd()
+    {
+        player.GetComponent<MotionCar>().enabled = false;
+            // wowzers
+        foreach (GameObject x in LoseObjects)
+        {
+            x.SetActive(false);
+        }
+        vidWIN.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+
+        working = false;
+        Debug.Log("DONE@2222");
+        gameObject.SetActive(false);
     }
 
     public void Update()

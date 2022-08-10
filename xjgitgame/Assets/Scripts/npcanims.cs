@@ -36,7 +36,7 @@ public class npcanims : MonoBehaviour
             nma.SetDestination(target.position);
             if (Vector3.Distance(transform.position, target.position) < closeamount)
             {
-                //canMove = false;
+                canMove = false;
                 anim.SetTrigger(trigger2);
             }
 
