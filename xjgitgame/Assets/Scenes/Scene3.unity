@@ -2086,7 +2086,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "- Win 11 games of \nROCK PAPER SCISSORS"
+  m_Text: "- Win the 11 rounds of \nROCK PAPER SCISSORS"
 --- !u!222 &471749682
 CanvasRenderer:
   m_ObjectHideFlags: 0
